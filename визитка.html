@@ -1,0 +1,147 @@
+<!DOCTYPE html> 
+<html lang="ru">
+<head>
+<meta charset="UTF-8"> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Сайт с изображениями-слайдером</title> 
+<style> 
+body { font-family: 'Arial', sans-serif; background-color: #f4f4f4; margin: 0; padding: 0; } 
+.intro-text { text-align: center; padding: 50px 20px; background-color: #fff; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); margin-bottom: 20px; } 
+.intro-text h1 { font-size: 2.5em; color: #130245; margin: 10px 0; } 
+.intro-text p { font-size: 1.2em; color: #333; margin: 5px 0; } 
+.contact-btn { display: inline-block; background-color: #130245; color: white; padding: 15px 25px; text-decoration: none; border-radius: 5px; font-size: 1em; transition: background-color 0.3s ease; } 
+.contact-btn:hover { background-color: #3b1b98; } 
+.slider { position: relative; width: 90%; max-width: 800px; margin: auto; overflow: hidden; border-radius: 10px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); background-color: #fff; } 
+.slides { display: flex; transition: transform 0.5s ease-in-out; } 
+.slide { position: relative; min-width: 100%; box-sizing: border-box; } 
+.slides img { width: 100%; border-radius: 10px; vertical-align: middle; } 
+.navigation { position: absolute; top: 50%; width: 100%; display: flex; justify-content: space-between; transform: translateY(-50%); } 
+.navigation a { background-color: rgba(0, 0, 0, 0.5); color: white; padding: 15px; text-decoration: none; font-size: 2em; border-radius: 50%; transition: background-color 0.3s ease; } 
+.navigation a:hover { background-color: rgba(0, 0, 0, 0.7); }
+ /* Стили для секции "Мои достижения" */ 
+ .achievements { background-color: #130245; color: white; padding: 50px 20px; } 
+ .achievements h2 { text-align: center; font-size: 2.5em; margin-bottom: 30px; } 
+ .achievement-cards { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; max-width: 1200px; margin: auto; } 
+ .card { background-color: #fff; color: #333; padding: 20px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); width: 300px; text-align: center; } 
+ .card img { width: 100px; height: 100px; object-fit: cover; border-radius: 50%; margin-bottom: 20px; } 
+ .card h3 { font-size: 1.5em; margin-bottom: 10px; } 
+ .card p { font-size: 1em; } 
+
+ 
+
+ .technologies {
+    background-color: #e0e0e0; /* Контрастный цвет фона */
+    color: #130245; /* Цвет текста */
+    padding: 50px 20px; /* Отступы секции */
+}
+
+.technologies h2 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 30px;
+}
+
+.technology-cards {
+    display: grid; /* Используем Grid для расположения карточек */
+    grid-template-columns: repeat(3, 1fr); /* Три колонки */
+    gap: 20px; /* Промежутки между карточками */
+    max-width: 1200px; /* Максимальная ширина контейнера */
+    margin: auto; /* Центрирование */
+}
+
+.card {
+    background-color: #fff; /* Фон карточки */
+    color: #333; /* Цвет текста карточки */
+    padding: 20px; /* Отступы внутри карточки */
+    border-radius: 10px; /* Скругление углов */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Тень карточки */
+    text-align: center; /* Центрирование текста */
+    width: 100%; /* Ширина карточки */
+    max-width: 300px; /* Максимальная ширина карточки */
+}
+
+.card img {
+    width: 100px; /* Ширина иконки */
+    height: 100px; /* Высота иконки */
+    margin-bottom: 20px; /* Отступ снизу */
+}
+
+ </style>
+  </head> 
+  <body> 
+    <div class="intro-text"> <h1>Привет! Я Мария — веб-разработчик</h1> 
+        <p>Создаю современные веб-приложения</p>
+         <p>Я специализируюсь на создании пользовательских интерфейсов и веб-приложений, которые работают на всех устройствах.</p>
+          <a href="#" class="contact-btn">Связаться со мной</a> 
+        </div>
+         <div class="slider"> 
+            <div class="slides">
+                 <div class="slide">
+                     <img src="https://sun9-57.userapi.com/impg/lQ82czoK35t4iwD9HVsK3OdKEieviuE3CeOARQ/egUJNCuuqFw.jpg?size=2016x1134&quality=95&sign=aa1346452731e6e19dcbe4fe6675ca62&type=album" alt="Image 1">
+             </div> 
+             <div class="slide"> 
+                <img src="https://sun9-22.userapi.com/impg/FhLxmEV9Wa5kkJozEuVzsX-Ir8RA4TDjIXH7XQ/IwTMJdRVmHo.jpg?size=2016x1134&quality=95&sign=5f4fa11f60f04d6936aa6d6927336977&type=album" alt="Image 2"> </div> 
+                <div class="slide"> 
+                    <img src="https://sun9-36.userapi.com/impg/1g3JlRLur-nktvKnn73XVae32wMbP3-CMy0Isw/uKdL2-QkwUI.jpg?size=2016x1134&quality=95&sign=064adfc21c155bba9f699104e857d06a&type=album" alt="Image 3"> </div> 
+                </div>
+                <div class="navigation"> <a href="#" id="prev">&#10094;</a> <a href="#" id="next">&#10095;</a> </div>
+             </div> 
+             <div class="achievements"> 
+                <h2>Мои достижения</h2> 
+                <div class="achievement-cards">
+                     <div class="card"> <img src="https://img.freepik.com/premium-photo/gold-winner-cup-golden-champion-cup-trophy-winner-award-victory-first-place-competition-winning-success-concept-copy-space-ai-generated_99272-5502.jpg" alt="Achievement 1">
+                         <h3>Победа в конкурсе</h3> <p>Получена награда на международном конкурсе веб-дизайна за инновационный интерфейс</p>
+                         </div> <div class="card"> 
+                            <img src="https://img.freepik.com/free-vector/startup-rocket-launch-project-start-setting-business-company-founding-teamwork-cooperation-partnership-businesspeople-cartoon-characters-vector-isolated-concept-metaphor-illustration_335657-2855.jpg" alt="Achievement 2">
+                             <h3>Создание и запуск успешных веб-сайтов</h3>
+                              <p>Разработан и запущен корпоративный веб-сайт для международной компании, который привлек тысячи новых пользователей и увеличил продажи на 30%.</p> 
+                            </div> <div class="card">
+                                 <img src="https://www.b17.ru/foto/uploaded/bb20aa028f239a55d498ddc000b6fa55.jpg" alt="Achievement 3"> 
+                                 <h3>Участие в значимых проектах</h3> 
+                                 <p>Участвовал в разработке и дизайне государственного портала, который облегчает доступ граждан к различным государственным услугам.</p> 
+                                </div>
+                             </div> </div> 
+                             <script> let index = 0; const slides = document.querySelector('.slides'); 
+                             const totalSlides = document.querySelectorAll('.slide').length; 
+                             document.getElementById('next').addEventListener('click', () => { index = (index + 1) % totalSlides; updateSlider(); }); 
+                             document.getElementById('prev').addEventListener('click', () => { index = (index - 1 + totalSlides) % totalSlides; updateSlider(); }); 
+                             function updateSlider() 
+                             { slides.style.transform = `translateX(${-index * 100}%)`; } 
+                             </script> 
+                <div class="technologies">
+                    <h2>Технологии, которыми я владею</h2>
+                    <div class="technology-cards">
+                        <div class="card">
+                            <img src="https://img.icons8.com/color/48/000000/html-5.png" alt="HTML5">
+                            <h3>HTML5</h3>
+                            <p>Опыт в создании семантически правильной и доступной разметки веб-страниц.</p>
+                        </div>
+                        <div class="card">
+                            <img src="https://img.icons8.com/color/48/000000/css3.png" alt="CSS3">
+                            <h3>CSS3</h3>
+                            <p>Умение работать с современными методами стилизации, включая Flexbox и Grid.</p>
+                        </div>
+                        <div class="card">
+                            <img src="https://img.icons8.com/color/48/000000/javascript.png" alt="JavaScript">
+                            <h3>JavaScript</h3>
+                            <p>Знание языка программирования для создания интерактивных и динамических веб-приложений.</p>
+                        </div>
+                        <div class="card">
+                            <img src="https://img.icons8.com/color/48/000000/react-native.png" alt="React">
+                            <h3>React</h3>
+                            <p>Опыт разработки одностраничных приложений с использованием библиотеки React.</p>
+                        </div>
+                        <div class="card">
+                            <img src="https://img.icons8.com/color/48/000000/nodejs.png" alt="Node.js">
+                            <h3>Node.js</h3>
+                            <p>Знание серверного программирования с использованием Node.js и Express.</p>
+                        </div>
+                        <div class="card">
+                            <img src="https://img.icons8.com/color/48/000000/mongodb.png" alt="MongoDB">
+                            <h3>MongoDB</h3>
+                            <p>Опыт работы с NoSQL базами данных, такими как MongoDB.</p>
+                        </div>
+                    </div>
+                </div>
+                             </body> 
+                             </html> 
